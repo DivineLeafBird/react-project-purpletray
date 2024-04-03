@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-scroll";
 // react icons
 import { GrLanguage } from "react-icons/gr";
 import { FaBars, FaXmark } from "react-icons/fa6";
@@ -32,9 +33,17 @@ const Navbar = () => {
             {/* Navbar Links */}
             <ul className="md:flex space-x-12 hidden">
               {navItems.map(({ link, path }) => (
-                <a key={link} href={path} className="block hover:text-gray-300">
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  key={link}
+                  to={path}
+                  className="block hover:text-gray-300 cursor-pointer "
+                >
                   {link}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>
@@ -70,13 +79,18 @@ const Navbar = () => {
         }`}
       >
         {navItems.map(({ link, path }) => (
-          <a
+          <Link
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-80}
             key={link}
-            href={path}
+            to={path}
             className="block text-white hover:text-secondary"
+            onClick={toggleMenu}
           >
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </>
