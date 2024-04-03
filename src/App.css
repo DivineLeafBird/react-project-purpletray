@@ -12,3 +12,7 @@ nav {
 .btnPrimary {
   @apply py-3 px-8 bg-secondary font-semibold text-white rounded-lg hover:bg-primary transition-all duration-300;
 }
+
+.gradientBgReverse {
+  background: linear-gradient(99deg, #dedfe6 0%, #ee9ae5 100%);
+}

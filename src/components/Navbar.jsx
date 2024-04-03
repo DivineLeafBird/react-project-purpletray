@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 // react icons
 import { GrLanguage } from "react-icons/gr";
 import { FaBars, FaXmark } from "react-icons/fa6";
